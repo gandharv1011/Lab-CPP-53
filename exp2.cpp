@@ -25,8 +25,10 @@ class student
     }
 };
 int main(){
-    student s;
-    s.inputDetails();
-    s.displayDetails();
+    student s1,s2,s3;
+    s1.inputDetails();
+    s1.displayDetails();
+    s2.inputDetails();
+    s2.displayDetails();
     return 0; 
 }
