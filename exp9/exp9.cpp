@@ -4,7 +4,9 @@ const double PI = 3.14159;
 class Shape { 
  public:
  virtual double calculateArea() const = 0;
- virtual double calculatePerimeter() const = 0;
+ virtual double calculatePerimeter() {
+ return 2 * PI ; 
+ }
 };
 class Circle: public Shape { 
 private:
@@ -14,9 +16,9 @@ private:
  double calculateArea() const override {
  return PI * pow(radius, 2); 
  }
- double calculatePerimeter() const override {
- return 2 * PI * radius; 
- }
+ /*double calculatePerimeter() const override {
+ return 2 * PI * radius;
+ }*/
 };
 class Rectangle: public Shape { 
  private:
@@ -27,7 +29,7 @@ class Rectangle: public Shape {
  double calculateArea() const override {
  return length * width; 
  }
- double calculatePerimeter() const override {
+ double calculatePerimeter()  {
  return 2 * (length + width); 
  }
 };
@@ -46,7 +48,7 @@ class Triangle: public Shape {
  return sqrt(s * (s - side1) * (s - side2) * (s - side3)); // Calculate the area using Heron's
  }
  // Override the virtual member function to calculate the perimeter
- double calculatePerimeter() const override {
+ double calculatePerimeter()  {
  return side1 + side2 + side3; // Calculate the perimeter of the triangle using its sides
  }
 };
