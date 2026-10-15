@@ -9,7 +9,7 @@ int main()
     string line;
 
     // Open file for writing
-    fout.open("sample.txt");
+    fout.open("exp9.cpp",ios::app);
 
     if (!fout) {
         cout << "Error opening file for writing!" << endl;
@@ -17,7 +17,7 @@ int main()
     }
 
     // Enter text; type -1 to stop
-    while (true) {
+    while (true) 
         getline(cin, line);
 
         if (line == "-1")
@@ -30,7 +30,7 @@ int main()
 
     // Open file for reading
     ifstream fin;
-    fin.open("sample.txt");
+    fin.open("exp2.cpp");
 
     if (!fin) {
         cout << "Error opening file for reading!" << endl;
